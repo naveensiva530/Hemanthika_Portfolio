@@ -13,25 +13,20 @@ html, body {
   background-color: #a67843;
 }
 
-/* FullPage scroll container */
+/* Smooth scroll container — no snapping, free continuous scroll */
 .fullpage-container {
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   position: relative;
 }
 
-/* Each section fills the full viewport */
+/* Sections just flow naturally */
 .fullpage-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 /* Hide default scrollbar */
@@ -71,9 +66,8 @@ html, body {
   }
   .fullpage-container {
     height: 100vh;
-  }
-  .fullpage-section {
-    min-height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -87,12 +81,6 @@ html, body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .fullpage-section {
-    min-height: auto;
-  }
-  .fullpage-container {
-    scroll-snap-type: none;
-  }
 }
 
 /* ===== LARGE MOBILE RESPONSIVE (480px - 600px) ===== */
@@ -105,12 +93,6 @@ html, body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .fullpage-section {
-    min-height: auto;
-  }
-  .fullpage-container {
-    scroll-snap-type: none;
-  }
 }
 
 /* ===== SMALL MOBILE RESPONSIVE (320px - 480px) ===== */
@@ -122,11 +104,5 @@ html, body {
     height: 100vh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  .fullpage-section {
-    min-height: auto;
-  }
-  .fullpage-container {
-    scroll-snap-type: none;
   }
 }

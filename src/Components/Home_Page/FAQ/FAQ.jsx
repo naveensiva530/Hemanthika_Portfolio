@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import faqImg from '../../../assets/FAQ.png';
 
 const faqData = [
   {
@@ -41,7 +42,7 @@ const FAQ = () => {
         <div className="faq-left">
           <div className="faq-image-wrapper">
             <img
-              src="src/assets/FAQ.png"
+              src={faqImg}
               alt="FAQ Illustration"
               className="faq-image"
             />

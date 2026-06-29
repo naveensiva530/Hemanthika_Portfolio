@@ -109,7 +109,7 @@ export default function Contact() {
 const styles = `
 .contact-section {
   width: 100%;
-  padding: 80px 20px;
+  padding: 50px 20px;
   background-color: #FFFFFF;
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;

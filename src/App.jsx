@@ -48,7 +48,7 @@ function App() {
       <section id="services" className="fullpage-section reveal-section"><Services /></section>
       <section id="testimonials" className="fullpage-section reveal-section"><Testimonials /></section>
       <section id="faq" className="fullpage-section reveal-section"><FAQ /></section>
-      <section id="contact" className="fullpage-section reveal-section" style={{minHeight: 'auto'}}><Contact /></section>
+      <section id="contact" className="fullpage-section reveal-section"><Contact /></section>
       <Footer />
     </div>
   )
