@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #a67843;
+}
+
+/* FullPage scroll container */
+.fullpage-container {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Each section fills the full viewport */
+.fullpage-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide default scrollbar */
+.fullpage-container::-webkit-scrollbar {
+  display: none;
+}
+
+.fullpage-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===== LAPTOP/DESKTOP RESPONSIVE (1200px+) ===== */
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 16px;
+  }
+  .fullpage-container {
+    height: 100vh;
+  }
+}
+
+/* ===== SMALL LAPTOP RESPONSIVE (992px - 1199px) ===== */
+@media (max-width: 1199px) and (min-width: 993px) {
+  html, body {
+    font-size: 15px;
+  }
+  .fullpage-container {
+    height: 100vh;
+  }
+}
+
+/* ===== TABLET LANDSCAPE RESPONSIVE (768px - 992px) ===== */
+@media (max-width: 992px) and (min-width: 769px) {
+  html, body {
+    font-size: 14px;
+  }
+  .fullpage-container {
+    height: 100vh;
+  }
+  .fullpage-section {
+    min-height: auto;
+  }
+}
+
+/* ===== TABLET PORTRAIT RESPONSIVE (600px - 768px) ===== */
+@media (max-width: 768px) and (min-width: 601px) {
+  html, body {
+    font-size: 13px;
+  }
+  .fullpage-container {
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fullpage-section {
+    min-height: auto;
+  }
+  .fullpage-container {
+    scroll-snap-type: none;
+  }
+}
+
+/* ===== LARGE MOBILE RESPONSIVE (480px - 600px) ===== */
+@media (max-width: 600px) and (min-width: 481px) {
+  html, body {
+    font-size: 12px;
+  }
+  .fullpage-container {
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fullpage-section {
+    min-height: auto;
+  }
+  .fullpage-container {
+    scroll-snap-type: none;
+  }
+}
+
+/* ===== SMALL MOBILE RESPONSIVE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  html, body {
+    font-size: 11px;
+  }
+  .fullpage-container {
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fullpage-section {
+    min-height: auto;
+  }
+  .fullpage-container {
+    scroll-snap-type: none;
+  }
+}
